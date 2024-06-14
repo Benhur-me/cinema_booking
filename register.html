@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Cinema Online Booking</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        const isLoggedIn = document.cookie.includes('isLoggedIn=true');
+        if (isLoggedIn) {
+            window.location.href = 'home.php';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Cinema Online Booking</h1>
+        <nav>
+            <ul>
+                <li><a href="home.php">Home</a></li>
+                <li><a href="movies.php">Movies</a></li>
+                <li><a href="#">Booking</a></li>
+                <li><a href="contact.php">Contact Us</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="register">
+            <h2>Create an Account</h2>
+            <form action="register.php" method="post">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit">Register</button>
+            </form>
+            <p>Already have an account? <a href="login.html">Login here</a>.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Cinema Online Booking. All rights reserved.</p>
+    </footer>
+</body>
+</html>

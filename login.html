@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Cinema Online Booking</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        // Check if the user is logged in
+        const isLoggedIn = document.cookie.includes('isLoggedIn=true');
+        if (isLoggedIn) {
+            window.location.href = 'home.html';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Cinema Online Booking</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="movies.html">Movies</a></li>
+                <li><a href="#">Booking</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="login">
+            <h2>Login to Your Account</h2>
+            <form action="login.php" method="post">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit">Login</button>
+            </form>
+            <p>Don't have an account? <a href="register.html">Register here</a>.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Cinema Online Booking. All rights reserved.</p>
+    </footer>
+</body>
+</html>
